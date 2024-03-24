@@ -1,51 +1,42 @@
 ---
+
+import '@fontsource-variable/jost';
 interface Props {
 	title: string;
 }
 
 const { title } = Astro.props;
+//porque tengo problemas para mostrar el favicon.
+//problema resuelto por no seguir las instrucciones, configurar correctamente el index..
+//https://fontsource.org/fonts/jost/install, para sacar fuente de letras.
+//problemas para instalar el tailwindcss.
+//problemas para que el tailwind se vea en accion
+// se necesita una configuracion correcta de tailwind/28/02/2024
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/samurai.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
+		<div class="max-w-6xl px-10 pt-40 mx-auto">
+			<slot />
+		</div>
+		
 	</body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
+		
 	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
+		font-family: "Jost Variable", system-ui, sans-serif;
+		background: #ddd;
+		
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+	
 </style>
