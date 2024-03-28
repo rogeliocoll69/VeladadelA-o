@@ -4,11 +4,32 @@ const TIMESTAMP_END = 1763308800000
 ---
 <section class="my-32 flex flex-col gap-y-10 justify-center items-center">
     <Laveladalogo class="text-primary"/>
-        <div data-date={TIMESTAMP_END}>
-        <div><span data-days>00 </span><span>Dias</span></div>
-        <div><span data-hours>00 </span><span>Horas</span></div>
-        <div><span data-minutes>00 </span><span>Minutos</span></div>
-        <div><span data-seconds>00 </span><span></span>Segundos</div>
+        <div 
+        class="flex flex-row gap-x-1 text-primary uppercase font-semibold"
+        data-date={TIMESTAMP_END}>
+        <div class="flex flex-col justify-center items-center gap-y-2 w-16">
+            <span class="text-4xl tabular-nums" data-days>00 </span>
+            <span class="text-xs text-center">Dias</span>
+        </div>
+
+        <span aria-hidden="true" class="mt-1 text-xl">:</span>
+
+        <div class="flex flex-col justify-center items-center gap-y-2 w-16">
+            <span class="text-4xl tabular-nums" data-hours>00 
+                </span>
+                <span class="text-xs text-center">Horas</span>
+            </div>
+            <span aria-hidden="true" class="mt-1 text-xl">:</span>    
+        <div class="flex flex-col justify-center items-center gap-y-2 w-16">
+            <span class="text-4xl tabular-nums" data-minutes>00 
+                </span><span class="text-xs text-center">Minutos</span>
+            </div>
+            <span aria-hidden="true" class="mt-1 text-xl">:</span>
+        <div class="flex flex-col justify-center items-center gap-y-2 w-16">
+            <span class="text-4xl tabular-nums" data-seconds>00 
+                </span>
+                <span class="text-xs text-center">Segundos</span>
+            </div>
         </div>
 </section>
 
