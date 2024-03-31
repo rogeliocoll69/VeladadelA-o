@@ -4,14 +4,9 @@ import '@fontsource-variable/jost';
 interface Props {
 	title: string;
 }
+import Noice from "@/sections/Noice.astro"
 
 const { title } = Astro.props;
-//porque tengo problemas para mostrar el favicon.
-//problema resuelto por no seguir las instrucciones, configurar correctamente el index..
-//https://fontsource.org/fonts/jost/install, para sacar fuente de letras.
-//problemas para instalar el tailwindcss.
-//problemas para que el tailwind se vea en accion
-// se necesita una configuracion correcta de tailwind/28/02/2024
 ---
 
 <!doctype html>
@@ -25,6 +20,7 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<Noice />
 		<div class="max-w-6xl px-10 pt-40 mx-auto">
 			<slot />
 		</div>
